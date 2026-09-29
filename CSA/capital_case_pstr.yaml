@@ -1,0 +1,14 @@
+name: capital_case_pstr
+memory_size: 0x400
+limit: 2000
+
+memory_mapped_io:
+  "0x300": [104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100, 10, 0]
+  "0x304": []
+
+reports:
+  - name: Result
+    slice: last
+    view: |
+      Output at (0x304): {io:0x304:sym}
+      Output (bytes): {io:0x304:dec}
